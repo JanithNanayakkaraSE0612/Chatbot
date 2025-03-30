@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request, jsonify
-
-
+#AutoModelForCausalLM & AutoTokenizer from Hugging Face's transformers library are used to load and use the pre-trained DialoGPT-medium model
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-
 
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
